@@ -16,27 +16,48 @@ const FeedbackForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState('');
 
+  const validate = (): string | null => {
+    if (rating === 0)
+      return 'Please select a rating.';
+    if (!category)
+      return 'Please select a category.';
+    if (!message.trim())
+      return 'Please write a message.';
+    if (message.trim().length < 10)
+      return 'Message must be at least 10 characters.';
+    if (message.trim().length > 1000)
+      return 'Message cannot exceed 1000 characters.';
+    // Strip any HTML tags entered by user
+    const stripped = message.replace(/<[^>]*>/g, '').trim();
+    if (stripped.length === 0)
+      return 'Message cannot contain only HTML tags.';
+    return null;
+  };
+
   const handleSubmit = async () => {
-    if (rating === 0)          { setError('Please select a rating.'); return; }
-    if (!category)             { setError('Please select a category.'); return; }
-    if (!message.trim())       { setError('Please write a message.'); return; }
+    const validationError = validate();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
     setError('');
     setLoading(true);
     try {
       const result = await submitFeedback({
-        Event_id: parseInt(eventId),
-        Rating: rating,
-        Category: category,
-        Message: message,
+        Event_id:     parseInt(eventId),
+        Rating:       rating,
+        Category:     category,
+        Message:      message.replace(/<[^>]*>/g, '').trim(), // sanitize before sending
         Is_Anonymous: isAnonymous,
       });
       history.replace(`/thank-you/${result.id}`);
     } catch (e: any) {
-      setError(e.message);
+      setError(e.message || 'Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
   };
+
 
   const stars = [1, 2, 3, 4, 5];
   const ratingLabels: Record<number, string> = {
