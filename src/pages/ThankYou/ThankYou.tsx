@@ -1,10 +1,17 @@
 import { IonPage, IonContent } from '@ionic/react';
 import { useParams, useHistory } from 'react-router-dom';
+import { logAction } from '../../services/audit.service';
+import { useEffect } from 'react';
 import './ThankYou.css';
 
 const ThankYou: React.FC = () => {
   const { feedbackId } = useParams<{ feedbackId: string }>();
   const history        = useHistory();
+
+  useEffect(() => {
+    logAction('PAGE_LOAD', `Guest reached thank you page — Feedback ID: ${feedbackId}`,
+      parseInt(feedbackId));
+  }, [feedbackId]);
 
   return (
     <IonPage>

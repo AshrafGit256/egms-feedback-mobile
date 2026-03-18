@@ -31,7 +31,6 @@ const SubmitFeedback: React.FC = () => {
     setLoading(true);
     try {
       const result = await submitFeedback({
-        Guest_id: parseInt(guestId),
         Event_id: parseInt(eventId),
         Rating: rating,
         Category: category,

@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f6f2;
+  background: #EEF4FB;
   position: relative;
   overflow: hidden;
   padding: 32px 24px;
@@ -15,8 +15,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 10% 10%, rgba(99, 140, 210, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 60% at 90% 90%, rgba(210, 140, 99, 0.08) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 10% 10%, rgba(79, 134, 198, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 90% 90%, rgba(242, 211, 53, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -34,27 +34,27 @@
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 3px;
-  color: #638cd2;
-  border: 1px solid rgba(99, 140, 210, 0.3);
+  color: #2E5F9E;
+  border: 1px solid rgba(46, 95, 158, 0.3);
   padding: 6px 16px;
   border-radius: 20px;
   margin-bottom: 28px;
   text-transform: uppercase;
-  background: rgba(99, 140, 210, 0.06);
+  background: rgba(46, 95, 158, 0.06);
 }
 
 .landing-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(42px, 10vw, 64px);
   font-weight: 900;
-  color: #1a1a2e;
+  color: #1a2e4a;
   line-height: 1.05;
   margin: 0 0 20px 0;
   letter-spacing: -1px;
 }
 
 .landing-title span {
-  background: linear-gradient(135deg, #638cd2, #d28c63);
+  background: linear-gradient(135deg, #2E5F9E, #F2D335);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -64,7 +64,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(26, 26, 46, 0.5);
+  color: rgba(26, 46, 74, 0.55);
   line-height: 1.7;
   margin: 0 0 40px 0;
 }
@@ -79,7 +79,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(26, 26, 46, 0.5);
+  color: rgba(26, 46, 74, 0.55);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -92,28 +92,28 @@
 .landing-select {
   width: 100%;
   background: #ffffff;
-  border: 1px solid rgba(26, 26, 46, 0.12);
+  border: 1px solid rgba(46, 95, 158, 0.2);
   border-radius: 12px;
   padding: 16px 44px 16px 20px;
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
-  color: #1a1a2e;
+  color: #1a2e4a;
   outline: none;
   appearance: none;
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(46, 95, 158, 0.08);
 }
 
 .landing-select:focus {
-  border-color: rgba(99, 140, 210, 0.5);
-  box-shadow: 0 0 0 3px rgba(99, 140, 210, 0.1);
+  border-color: #4F86C6;
+  box-shadow: 0 0 0 3px rgba(79, 134, 198, 0.15);
 }
 
 .landing-select option {
   background: #ffffff;
-  color: #1a1a2e;
+  color: #1a2e4a;
 }
 
 .select-arrow {
@@ -121,14 +121,14 @@
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(26, 26, 46, 0.35);
+  color: #4F86C6;
   pointer-events: none;
   font-size: 14px;
 }
 
 .event-preview {
-  background: rgba(99, 140, 210, 0.06);
-  border: 1px solid rgba(99, 140, 210, 0.15);
+  background: rgba(111, 179, 232, 0.1);
+  border: 1px solid rgba(79, 134, 198, 0.25);
   border-radius: 10px;
   padding: 12px 16px;
   margin-top: 4px;
@@ -139,13 +139,13 @@
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #638cd2;
+  color: #2E5F9E;
   margin: 0 0 4px 0;
 }
 
 .event-preview-date {
   font-size: 13px;
-  color: rgba(26, 26, 46, 0.5);
+  color: rgba(26, 46, 74, 0.5);
   margin: 0;
 }
 
@@ -158,7 +158,7 @@
 .loading-dot {
   width: 8px;
   height: 8px;
-  background: rgba(99, 140, 210, 0.4);
+  background: #4F86C6;
   border-radius: 50%;
   animation: pulse 1.2s ease infinite;
 }
@@ -169,12 +169,12 @@
 .landing-error {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: #e53e3e;
+  color: #c0392b;
   margin: 0;
   padding: 10px 14px;
-  background: rgba(229, 62, 62, 0.06);
+  background: rgba(192, 57, 43, 0.06);
   border-radius: 8px;
-  border: 1px solid rgba(229, 62, 62, 0.15);
+  border: 1px solid rgba(192, 57, 43, 0.15);
 }
 
 .landing-btn {
@@ -184,7 +184,7 @@
   gap: 10px;
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, #638cd2, #d28c63);
+  background: linear-gradient(135deg, #2E5F9E, #4F86C6);
   border: none;
   border-radius: 12px;
   font-family: 'DM Sans', sans-serif;
@@ -194,7 +194,7 @@
   cursor: pointer;
   margin-top: 8px;
   transition: opacity 0.2s, transform 0.2s;
-  box-shadow: 0 4px 20px rgba(99, 140, 210, 0.3);
+  box-shadow: 0 4px 20px rgba(46, 95, 158, 0.35);
 }
 
 .landing-btn:disabled { opacity: 0.5; cursor: not-allowed; }

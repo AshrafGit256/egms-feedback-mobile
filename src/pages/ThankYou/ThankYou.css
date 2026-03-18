@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f6f2;
+  background: #EEF4FB;
   padding: 32px 24px;
   position: relative;
   overflow: hidden;
@@ -15,8 +15,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(72, 187, 120, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 80% 80%, rgba(99, 140, 210, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(242, 211, 53, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 80% 80%, rgba(79, 134, 198, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -32,22 +32,22 @@
 .ty-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #48bb78, #38a169);
+  background: linear-gradient(135deg, #F2D335, #D4B81F);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  color: white;
+  color: #1a2e4a;
   margin: 0 auto 28px;
-  box-shadow: 0 8px 32px rgba(72, 187, 120, 0.25);
+  box-shadow: 0 8px 32px rgba(242, 211, 53, 0.35);
 }
 
 .ty-title {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   font-weight: 900;
-  color: #1a1a2e;
+  color: #1a2e4a;
   margin: 0 0 16px 0;
   letter-spacing: -1px;
 }
@@ -56,18 +56,18 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(26, 26, 46, 0.5);
+  color: rgba(26, 46, 74, 0.55);
   line-height: 1.7;
   margin: 0 0 32px 0;
 }
 
 .ty-id-card {
   background: #ffffff;
-  border: 1px solid rgba(26, 26, 46, 0.08);
+  border: 1px solid rgba(46, 95, 158, 0.1);
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(46, 95, 158, 0.08);
 }
 
 .ty-id-label {
@@ -76,7 +76,7 @@
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(26, 26, 46, 0.35);
+  color: rgba(26, 46, 74, 0.4);
   margin: 0 0 8px 0;
 }
 
@@ -84,14 +84,14 @@
   font-family: 'Playfair Display', serif;
   font-size: 32px;
   font-weight: 700;
-  color: #638cd2;
+  color: #2E5F9E;
   margin: 0;
 }
 
 .ty-note {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: rgba(26, 26, 46, 0.35);
+  color: rgba(26, 46, 74, 0.4);
   margin: 0 0 36px 0;
 }
 
@@ -99,19 +99,19 @@
   width: 100%;
   padding: 18px;
   background: #ffffff;
-  border: 1px solid rgba(26, 26, 46, 0.1);
+  border: 1px solid rgba(46, 95, 158, 0.15);
   border-radius: 12px;
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: rgba(26, 26, 46, 0.6);
+  color: #2E5F9E;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(46, 95, 158, 0.08);
 }
 
 .ty-btn:active {
-  background: rgba(26, 26, 46, 0.04);
+  background: rgba(46, 95, 158, 0.05);
   transform: scale(0.98);
 }
 
