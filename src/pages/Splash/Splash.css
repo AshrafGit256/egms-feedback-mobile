@@ -1,0 +1,120 @@
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #ffffff;
+  text-align: center;
+  color: white;
+  transition: opacity 0.6s ease;
+}
+
+.splash-fade-out {
+  opacity: 0;
+}
+
+/* Loader layout */
+.loader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.loader svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* Stroke styling */
+.loader path {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Animations */
+.dash {
+  animation: dashArray 2s ease-in-out infinite,
+             dashOffset 2s linear infinite;
+}
+
+.spin {
+  animation: spinDashArray 2s ease-in-out infinite,
+             spin 8s ease-in-out infinite,
+             dashOffset 2s linear infinite;
+  transform-origin: center;
+}
+
+.dash-p {
+  animation: dashArray 2s ease-in-out infinite,
+             dashOffset 2s linear infinite;
+}
+
+.dash-a {
+  animation: dashArray 2s ease-in-out 0.1s infinite,
+             dashOffset 2s linear 0.1s infinite;
+}
+
+.dash-s {
+  animation: dashArray 2s ease-in-out 0.2s infinite,
+             dashOffset 2s linear 0.2s infinite;
+}
+
+/* Keyframes */
+@keyframes dashArray {
+  0% { stroke-dasharray: 0 1 359 0; }
+  50% { stroke-dasharray: 0 359 1 0; }
+  100% { stroke-dasharray: 359 1 0 0; }
+}
+
+@keyframes dashOffset {
+  0% { stroke-dashoffset: 365; }
+  100% { stroke-dashoffset: 5; }
+}
+
+@keyframes spinDashArray {
+  0% { stroke-dasharray: 270 90; }
+  50% { stroke-dasharray: 0 360; }
+  100% { stroke-dasharray: 270 90; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(270deg); }
+  50% { transform: rotate(540deg); }
+  75% { transform: rotate(810deg); }
+  100% { transform: rotate(1080deg); }
+}
+
+.splash-tagline {
+  font-size: 0.95rem;
+  margin-top: 6px;
+  letter-spacing: 2px;
+  font-weight: 500;
+
+  background: linear-gradient(90deg, #007CFF, #00C9FF, #973BED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+
+.splash-greeting {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.splash-footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
